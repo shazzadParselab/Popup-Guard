@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Popup Guard</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="../icons/icon32.png" alt="" class="logo" />
+      <h1 class="title">Popup Guard</h1>
+      <label class="switch" title="Turn protection on or off everywhere">
+        <input type="checkbox" id="enabled" />
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <section class="current">
+      <span class="current-host" id="current-host">—</span>
+      <span class="current-status" id="current-status"></span>
+      <button type="button" class="protect" id="protect" hidden>Protect this site</button>
+    </section>
+
+    <section class="sites">
+      <h2 class="section-title">Protected sites <span id="site-count"></span></h2>
+      <ul class="site-list" id="site-list"></ul>
+      <p class="empty" id="empty">
+        No sites yet. Open a site that throws popups at you and press
+        <b>Protect this site</b>.
+      </p>
+    </section>
+
+    <section class="quick" id="quick">
+      <!-- rows injected by popup.js from the QUICK list -->
+    </section>
+
+    <footer class="footer">
+      <span><b id="total">0</b> blocked in total</span>
+      <button type="button" class="link" id="reset">Reset stats</button>
+    </footer>
+
+    <script src="../src/core/defaults.js"></script>
+    <script src="../src/core/policy.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
